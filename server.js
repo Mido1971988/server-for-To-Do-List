@@ -32,9 +32,9 @@ app.post("/tasks", (req, res) => {
 
 app.post("/listOfUsers", (req, res) => {
   let jsonReq = JSON.stringify(req.body);
-  fs.writeFileSync("./tasks.json", jsonReq, "utf8");
+  fs.writeFileSync("./listOfUsers/listOfUsers.json", jsonReq, "utf8");
   res.header("Content-Type", "text/plain");
-  res.send("Thnx For Tasks!");
+  res.send("List Of User Updated!");
 });
 
 app.listen("3500", () => console.log("Server Running on Port 3500..."));
